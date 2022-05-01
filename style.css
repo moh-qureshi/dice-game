@@ -1,0 +1,278 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+
+body{
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#background{
+    margin-top: 100px;
+    width: 1000px;
+    height: 500px;
+    background-color: black;
+    opacity: 0.8;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+#welcome-message, #twoplayer-gamescreen, #oneplayer-gamescreen, #lose-screen, #win-screen, #oneplayer-rules{
+    position: relative;
+    top: 70px;
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+}
+
+
+#title{
+    font-size: 80px;
+    letter-spacing: 3px;
+    animation-name: title-animation;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title-animation {
+    from{color: white;}
+    to{color: red;}
+    from{text-shadow: 5px 5px 5px red;}
+    to{text-shadow: 5px 5px 5px white;}
+}
+
+#player-select{
+    margin: 50px 0 50px 0;
+    color: white;
+    font-size: 40px;
+    text-shadow: 5px 5px 5px red;
+}
+
+#player-select-btn{
+    width: 600px;
+    display: flex;
+}
+
+.player-select-btn{
+    height: 90px;
+    font-size: 30px;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    border: 5px solid transparent;
+    border-radius: 30px;
+}
+
+.player-select-btn:hover{
+    border: 5px solid white;
+    color: white;
+    transition: 0.3s;
+    text-shadow: 2px 2px 2px white;
+}
+
+.rules-title{
+    font-size: 80px;
+    letter-spacing: 3px;
+    color: red;
+    text-align: center;
+}
+
+.rules-text{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 9px 0 5px 0;
+}
+
+.rules-text2{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: 9px 0 5px 0;
+}
+
+#startGame1{
+    position: relative;
+    left: 40%;
+}
+
+#startGame2{
+    position: relative;
+    left: 40%;
+}
+
+.player-text{
+    color: red;
+    font-size: 70px;
+    text-shadow: 5px 2px 2px white;
+}
+
+.game-section{
+    margin-top: 80px;
+    display: flex;
+}
+
+#dice img{
+    height: 100px;
+}
+
+.shake{
+    animation: shake 0.1ms infinite;
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+
+.score{
+    border: 3px solid white;
+    width: 200px;
+    height: 60px;
+    margin-top: 40px;
+    align-items: center;
+    position: relative;
+    right: 7px;
+}
+
+.scoreText{
+    color: red;
+    font-size: 30px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.lose-btns{
+    margin-top: 50px;
+    display: flex;
+}
+
+.lose-screen-score{
+    color: red;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.score-lose{
+    border: 3px solid white;
+    width: 200px;
+    height: 60px;
+    margin-top: 5px;
+    align-items: center;
+    position: relative;
+    right: 7px;
+}
+
+#twoplayer-namescreen{
+    margin-top: 40px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.name-enter{
+    color: red;
+    font-size: 60px;
+    padding: 40px 0 40px 0;
+    position: inherit;
+    right: 250px;
+}
+
+.name-input{
+    border: 5px solid white;
+    margin: 30px 0 30px 0;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    width: 400px;
+}
+.name-input:focus{
+    border: 5px solid red;
+    outline: none;
+}
+
+#player1-name, #player2-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 250px;
+    
+}
+
+#player1-btns, #player2-btns{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+}
+
+.playerOne-btns, .playerTwo-btns{
+    margin: 0 40px 40px 0;
+}
+
+#player1-screen{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 300px;
+}
+
+#player2-screen{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 300px;
+    bottom: 460px;
+}
+
+#dice-img2{
+    position: relative;
+    bottom: 200px;
+}
+
+#win-text{
+    position: relative;
+    top: 40px;
+}
+
+#twoplayer-lose-screen{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#twoplayer-lose-text{
+    font-size: 40px;
+    color: white;
+}
+
+.twoplayer-lose-btns{
+    position: relative;
+    left: 240px;
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    margin: 100px 0 50px 0;
+}

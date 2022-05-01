@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="background">
+            <div id="welcome-message">
+                <h1 id="title"> Dice Game </h1>
+                <h1 id="player-select">Select Game</h1>
+                <div id="player-select-btn">
+                    <button id="one-player" class="player-select-btn" onclick="onePlayerSelect();">One Player</button>
+                    <button id="two-players" class="player-select-btn" onclick="twoPlayerSelect()">Two Players</button>
+                </div>
+            </div>
+            <div id="oneplayer-rules">
+                <h1 class="rules-title">Rules Of The Game</h1>
+                <p class="rules-text">Press the roll button to roll the dice. </p>
+                <p class="rules-text">Each time you roll your score adds up. </p>
+                <p class="rules-text">If your score is 20 or over, you win! </p>
+                <p class="rules-text">But if you roll a 1 and your score is under 20, you lose. </p>
+                <button id="startGame1" class="player-select-btn" onclick="startOnePlayerGame();">Start Game</button>
+            </div>
+            <div id="twoplayer-rules">
+                <h1 class="rules-title">Rules Of The Game</h1>
+                <p class="rules-text2">Player One starts the game.</p>
+                <p class="rules-text2">Press the roll button to roll the dice. </p>
+                <p class="rules-text2">Each time you roll your score adds up. </p>
+                <p class="rules-text2">If your score is 20 or over, you win! </p>
+                <p class="rules-text2">But if you roll a 1 and your score is under 20, you lose. </p>
+                <p class="rules-text2">Player One can hold once the score reaches 15 or over. </p>
+                <button id="startGame2" class="player-select-btn" onclick="startNameScreen();">Start Game</button>
+            </div>
+            <div id="oneplayer-gamescreen">
+                <h1 class="player-text">Player 1</h1>
+                <div class="game-section">
+                    <button class="player-select-btn" onclick="onePlayerRoll()">Roll</button>
+                    <div id="dice">
+                    <img src="/images/dice1.png" id="dice-img">
+                    </div>
+                    <button class="player-select-btn">Hold</button>
+                </div>
+                <div class="score">
+                    <p id="score-text" class="scoreText"></p>
+                </div>
+            </div>
+            <div id="lose-screen">
+                <h1 class="player-text">You lose</h1>
+                <div class="lose-btns">
+                <button class="player-select-btn" onclick="startOnePlayerGame()">Play Again</button>
+                <button class="player-select-btn" onclick="titleScreen()">Title Screen</button>
+            </div>
+            <p class="lose-screen-score">Your score was</p>
+            <div class="score-lose">
+                <p id="finalScore"class="scoreText"></p>
+            </div>
+        </div>
+        <div id="win-screen">
+            <h1 class="player-text">You Win!</h1>
+            <div class="lose-btns">
+            <button class="player-select-btn" onclick="startOnePlayerGame()">Play Again</button>
+            <button class="player-select-btn" onclick="titleScreen()">Title Screen</button>
+        </div>
+        <p class="lose-screen-score">Your score was</p>
+        <div class="score-lose">
+            <p id="winScore"class="scoreText"></p>
+        </div>
+    </div>
+    <div id="twoplayer-namescreen">
+        <div id="player1-name">
+            <h1 class="name-enter">Enter your name</h1>
+            <input type="text" id="playerOneName" placeholder="Player 1" class="name-input" autocomplete="off">
+            <button class="player-select-btn" onclick="playerTwoName()">Enter</button>
+        </div>
+        <div id="player2-name">
+            <h1 class="name-enter">Enter your name</h1>
+            <input type="text" id="playerTwoName" placeholder="Player 2" class="name-input">
+            <button class="player-select-btn" onclick="startTwoPlayerGame()">Enter</button>
+        </div>
+    </div>
+    <div id="twoplayer-gamescreen">
+        <div id="player1-screen" class="player-screen">
+            <h1 class="player-text" id="player1-text">Player 1</h1>
+            <div class="score">
+                <p id="player1-score" class="scoreText"></p>
+            </div>
+                <div id="player1-btns">
+                    <button class="player-select-btn playerOne-btns" onclick="playerOneRoll()">Roll</button>
+                    <button class="player-select-btn playerOne-btns">Hold</button>
+                </div>
+        </div>
+        <div id="dice-2">
+            <img src="/images/dice1.png" id="dice-img2">
+            </div>
+        <div id="player2-screen" class="player-screen">
+            <h1 class="player-text" id="player2-text">Player 2</h1>
+            <div class="score">
+                <p id="player2-score" class="scoreText"></p>
+            </div>
+                <div id="player2-btns">
+                    <button class="player-select-btn playerTwo-btns" onclick="playerTwoRoll()">Roll</button>
+                    <button class="player-select-btn playerTwo-btns">Hold</button>
+                </div>
+        </div>
+    </div>
+    <div id="twoplayer-lose-screen">
+        <h1 class="player-text" id="win-text"></h1>
+        <div class="twoplayer-lose-btns">
+        <button class="player-select-btn" onclick="startTwoPlayerGame()">Play Again</button>
+        <button class="player-select-btn" onclick="titleScreen()">Title Screen</button>
+    </div>
+    <p id="twoplayer-lose-text"></p>
+</div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

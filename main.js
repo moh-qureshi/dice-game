@@ -184,6 +184,7 @@ function onePlayerRoll(){
 
 function titleScreen(){
     losePage.style.display = "none"
+    winPage.style.display = "none"
     twoPlayerLosePage.style.display = "none"
     welcomePage.style.display = "initial"
 }
